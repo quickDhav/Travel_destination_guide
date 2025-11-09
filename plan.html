@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan Your Trip - TravelGo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">TravelGo</div>
+    <ul class="nav-links">
+      <li><a href="index.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/home.png"></a></li>
+      <li><a href="destinations.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/globe-earth.png"></a></li>
+      <li><a href="plan.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/airplane-take-off--v2.png"></a></li>
+      <li><a href="about.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/info.png"></a></li>
+    </ul>
+  </nav>
+
+  <section class="page-header">
+    <h1>Plan Your Trip</h1>
+  </section>
+
+  <section class="plan-section full-screen">
+    <form class="plan-form">
+      <label>Destination:</label>
+      <select required>
+        <option value="">Select Destination</option>
+        <option>Maldives</option>
+        <option>London</option>
+        <option>New York</option>
+        <option>Bali</option>
+      </select>
+
+      <label>Departure Date:</label>
+      <input type="date" required>
+
+      <label>Return Date:</label>
+      <input type="date" required>
+
+      <label>Number of Travelers:</label>
+      <input type="number" min="1" placeholder="1" required>
+
+      <label>Travel Type:</label>
+      <select required>
+        <option>Adventure</option>
+        <option>Luxury</option>
+        <option>Family</option>
+        <option>Romantic</option>
+      </select>
+
+      <button type="submit">Search Packages</button>
+    </form>
+  </section>
+</body>
+</html>
