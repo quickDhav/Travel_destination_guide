@@ -1,46 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Destinations - TravelGo</title>
+  <title>TravelGo - Destinations</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <nav>
-    <div class="logo">TravelGo</div>
-    <ul class="nav-links">
-      <li><a href="index.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/home.png"></a></li>
-      <li><a href="destinations.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/globe-earth.png"></a></li>
-      <li><a href="plan.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/airplane-take-off--v2.png"></a></li>
-      <li><a href="about.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/info.png"></a></li>
-    </ul>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="fas fa-plane-departure me-2"></i>TravelGo
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="plan.html">Plan Trip</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        </ul>
+        <a href="plan.html" class="btn btn-primary ms-lg-3 rounded-pill px-4">Book Now</a>
+      </div>
+    </div>
   </nav>
 
-  <section class="destinations full-screen">
-    <h1>Explore Our Top Destinations</h1>
-    <div class="cards">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Tokyo">
-        <h3>Tokyo</h3>
+  <!-- Header -->
+  <header class="page-header d-flex align-items-center justify-content-center text-white"
+    style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1920&q=80') no-repeat center/cover; height: 60vh; margin-top: 0;">
+    <div class="text-center" data-aos="fade-up">
+      <h1 class="display-3 fw-bold">Explore the World</h1>
+      <p class="lead">Find your perfect getaway from our curated list of destinations.</p>
+    </div>
+  </header>
+
+  <!-- Filter Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row justify-content-center mb-5" data-aos="fade-up">
+        <div class="col-md-8 text-center">
+          <div class="btn-group" role="group" aria-label="Destination Filters">
+            <button type="button" class="btn btn-outline-primary active">All</button>
+            <button type="button" class="btn btn-outline-primary">Beach</button>
+            <button type="button" class="btn btn-outline-primary">Mountain</button>
+            <button type="button" class="btn btn-outline-primary">City</button>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=600&q=80" alt="Santorini">
-        <h3>Santorini</h3>
-      </div>
-      <div class="card">
-        <img src="https://blog.onevasco.com/wp-content/uploads/Buildings-in-Singapore-You-Must-See.jpeg" alt="Singapore">
-        <h3>Singapore</h3>
-      </div>
-      <div class="card">
-        <img src="https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F157ddee1-73e1-4498-ad68-3292ca8d5163.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1" alt="Dubai">
-        <h3>Dubai</h3>
-      </div>
-      <div class="card">
-        <img src="https://internationalliving.com/_next/image/?url=https%3A%2F%2Fimages.ctfassets.net%2Fwv75stsetqy3%2FDaKdXY2tkQGWeVQiCbSx7%2Fac01166282697e4e0cafb99180d35cd1%2FThailand_Featured.jpg%3Fq%3D60%26fit%3Dfill%26fm%3Dwebp&w=3840&q=60" alt="thailand">
-        <h3>Thailand</h3>
+
+      <div class="row g-4">
+        <!-- Destination 1 -->
+        <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card border-0 shadow-sm h-100 overflow-hidden destination-card">
+            <div class="position-relative">
+              <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top" alt="Paris">
+              <span class="badge bg-danger position-absolute top-0 end-0 m-3">Bestseller</span>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title fw-bold mb-0">Paris, France</h5>
+                <span class="text-warning"><i class="fas fa-star"></i> 4.9</span>
+              </div>
+              <p class="card-text text-muted">Romantic getaways, Eiffel Tower, and fine dining.</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="h5 text-primary fw-bold mb-0">$1,200</span>
+                <a href="plan.html" class="btn btn-outline-primary btn-sm rounded-pill px-3">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Destination 2 -->
+        <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="card border-0 shadow-sm h-100 overflow-hidden destination-card">
+            <div class="position-relative">
+              <img src="https://balidave.com/wp-content/uploads/2022/11/best-hotel-bali.jpeg" class="card-img-top"
+                alt="Bali">
+              <span class="badge bg-success position-absolute top-0 end-0 m-3">Nature</span>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title fw-bold mb-0">Bali, Indonesia</h5>
+                <span class="text-warning"><i class="fas fa-star"></i> 4.8</span>
+              </div>
+              <p class="card-text text-muted">Beautiful beaches, temples, and vibrant culture.</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="h5 text-primary fw-bold mb-0">$850</span>
+                <a href="plan.html" class="btn btn-outline-primary btn-sm rounded-pill px-3">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Destination 3 -->
+        <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="card border-0 shadow-sm h-100 overflow-hidden destination-card">
+            <div class="position-relative">
+              <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top" alt="Dubai">
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title fw-bold mb-0">Dubai, UAE</h5>
+                <span class="text-warning"><i class="fas fa-star"></i> 4.7</span>
+              </div>
+              <p class="card-text text-muted">Luxury shopping, modern architecture, and nightlife.</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="h5 text-primary fw-bold mb-0">$1,500</span>
+                <a href="plan.html" class="btn btn-outline-primary btn-sm rounded-pill px-3">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Destination 4 -->
+        <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="card border-0 shadow-sm h-100 overflow-hidden destination-card">
+            <div class="position-relative">
+              <img src="https://images.unsplash.com/photo-1542259659-4bf98a50616e?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top" alt="Maldives">
+              <span class="badge bg-info position-absolute top-0 end-0 m-3">Relax</span>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title fw-bold mb-0">Maldives</h5>
+                <span class="text-warning"><i class="fas fa-star"></i> 5.0</span>
+              </div>
+              <p class="card-text text-muted">Crystal clear waters, overwater bungalows, and peace.</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="h5 text-primary fw-bold mb-0">$2,200</span>
+                <a href="plan.html" class="btn btn-outline-primary btn-sm rounded-pill px-3">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Destination 5 -->
+        <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="card border-0 shadow-sm h-100 overflow-hidden destination-card">
+            <div class="position-relative">
+              <img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top" alt="Kyoto">
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title fw-bold mb-0">Kyoto, Japan</h5>
+                <span class="text-warning"><i class="fas fa-star"></i> 4.8</span>
+              </div>
+              <p class="card-text text-muted">Ancient temples, traditional tea houses, and cherry blossoms.</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="h5 text-primary fw-bold mb-0">$1,800</span>
+                <a href="plan.html" class="btn btn-outline-primary btn-sm rounded-pill px-3">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Destination 6 -->
+        <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="card border-0 shadow-sm h-100 overflow-hidden destination-card">
+            <div class="position-relative">
+              <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top" alt="Cinque Terre">
+              <span class="badge bg-warning position-absolute top-0 end-0 m-3 text-dark">Trending</span>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title fw-bold mb-0">Cinque Terre, Italy</h5>
+                <span class="text-warning"><i class="fas fa-star"></i> 4.9</span>
+              </div>
+              <p class="card-text text-muted">Colorful seaside villages, hiking trails, and fresh seafood.</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="h5 text-primary fw-bold mb-0">$1,400</span>
+                <a href="plan.html" class="btn btn-outline-primary btn-sm rounded-pill px-3">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h4 class="fw-bold mb-3">TravelGo</h4>
+          <p class="text-white-50">Making your travel dreams a reality with our expert planning and top-notch services.
+            Explore the world with confidence.</p>
+          <div class="d-flex gap-3 social-links">
+            <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <h5 class="fw-bold mb-3">Quick Links</h5>
+          <ul class="list-unstyled text-white-50 footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="plan.html">Plan Trip</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5 class="fw-bold mb-3">Contact Info</h5>
+          <ul class="list-unstyled text-white-50">
+            <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Travel St, New York, NY</li>
+            <li class="mb-2"><i class="fas fa-phone me-2"></i> +1 (555) 123-4567</li>
+            <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@travelgo.com</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5 class="fw-bold mb-3">Gallery</h5>
+          <div class="row g-2">
+            <div class="col-4"><img
+                src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=150&q=80"
+                class="img-fluid rounded" alt="Gallery"></div>
+            <div class="col-4"><img src="https://balidave.com/wp-content/uploads/2022/11/best-hotel-bali.jpeg"
+                class="img-fluid rounded" alt="Gallery"></div>
+            <div class="col-4"><img
+                src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=150&q=80"
+                class="img-fluid rounded" alt="Gallery"></div>
+            <div class="col-4"><img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=150&q=80"
+                class="img-fluid rounded" alt="Gallery"></div>
+            <div class="col-4"><img
+                src="https://images.unsplash.com/photo-1542259659-4bf98a50616e?auto=format&fit=crop&w=150&q=80"
+                class="img-fluid rounded" alt="Gallery"></div>
+            <div class="col-4"><img
+                src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=150&q=80"
+                class="img-fluid rounded" alt="Gallery"></div>
+          </div>
+        </div>
+      </div>
+      <hr class="alert-secondary my-4">
+      <div class="text-center text-white-50">
+        <small>&copy; 2026 TravelGo. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
 </body>
+
 </html>
