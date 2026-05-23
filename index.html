@@ -50,10 +50,10 @@
 
       <!-- Search Box -->
       <div class="search-box bg-white p-4 rounded-4 shadow-lg mx-auto" style="max-width: 800px;">
-        <form class="row g-3">
+        <form id="search-form" class="row g-3">
           <div class="col-md-4">
             <div class="form-floating text-dark">
-              <input type="text" class="form-control" id="destination" placeholder="Where to?">
+              <input type="text" class="form-control" id="destination" placeholder="Where to?" required>
               <label for="destination"><i class="fas fa-map-marker-alt me-2 text-primary"></i>Destination</label>
             </div>
           </div>
@@ -70,6 +70,17 @@
       </div>
     </div>
   </header>
+
+  <!-- Search Results Section -->
+  <section id="search-results-section" class="d-none py-5 bg-light border-bottom">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10" id="search-results-container">
+          <!-- Dynamically injected content -->
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Features Section -->
   <section class="py-5">
@@ -131,7 +142,7 @@
               <p class="card-text text-muted">Experience the city of love, art, and fashion.</p>
               <div class="d-flex justify-content-between align-items-center mt-3">
                 <span class="h5 text-primary fw-bold mb-0">$1,200</span>
-                <a href="plan.html" class="btn btn-outline-primary btn-sm rounded-pill px-3">View Details</a>
+                <a href="plan.html?destination=Paris" class="btn btn-outline-primary btn-sm rounded-pill px-3">View Details</a>
               </div>
             </div>
           </div>
@@ -153,7 +164,7 @@
               <p class="card-text text-muted">Tropical paradise with beaches, temples, and culture.</p>
               <div class="d-flex justify-content-between align-items-center mt-3">
                 <span class="h5 text-primary fw-bold mb-0">$850</span>
-                <a href="plan.html" class="btn btn-outline-primary btn-sm rounded-pill px-3">View Details</a>
+                <a href="plan.html?destination=Bali" class="btn btn-outline-primary btn-sm rounded-pill px-3">View Details</a>
               </div>
             </div>
           </div>
@@ -174,7 +185,7 @@
               <p class="card-text text-muted">Modern architecture and luxury shopping experiences.</p>
               <div class="d-flex justify-content-between align-items-center mt-3">
                 <span class="h5 text-primary fw-bold mb-0">$1,500</span>
-                <a href="plan.html" class="btn btn-outline-primary btn-sm rounded-pill px-3">View Details</a>
+                <a href="plan.html?destination=Dubai" class="btn btn-outline-primary btn-sm rounded-pill px-3">View Details</a>
               </div>
             </div>
           </div>
@@ -200,8 +211,8 @@
       <p class="lead mb-4 opacity-75">Get the latest travel updates, deals and tips directly to your inbox.</p>
       <div class="row justify-content-center">
         <div class="col-md-6">
-          <form class="d-flex gap-2">
-            <input type="email" class="form-control rounded-pill px-4" placeholder="Enter your email">
+          <form id="newsletter-form" class="d-flex gap-2">
+            <input type="email" class="form-control rounded-pill px-4" placeholder="Enter your email" required>
             <button type="submit" class="btn btn-primary rounded-pill px-4">Subscribe</button>
           </form>
         </div>
@@ -294,6 +305,7 @@
       }
     });
   </script>
+  <script src="search.js"></script>
 </body>
 
 </html>
